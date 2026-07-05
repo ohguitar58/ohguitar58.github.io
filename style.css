@@ -2,17 +2,21 @@ body {
     font-family: Arial, sans-serif;
     max-width: 900px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 20px;
     line-height: 1.6;
+    background-color: #f8f9fa;
 }
 
 nav {
-    margin-bottom: 20px;
+    background-color: #003366;
+    padding: 12px;
+    border-radius: 5px;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #0066cc;
+    margin-right: 15px;
 }
 
 nav a:hover {
@@ -20,11 +24,15 @@ nav a:hover {
 }
 
 h1 {
-    color: #222;
+    color: #003366;
 }
 
 h2 {
-    color: #444;
+    color: #555;
+}
+
+p {
+    color: #333;
 }
 
 hr {
