@@ -9,70 +9,161 @@
 </nav>
 
 <body class="projects-page">
-<hr>
+    <hr>
 
-<h1>My AI Projects
-    <link rel="stylesheet" href="style.css">
-</h1>
-<h2>1. Our Church Sermon Cartoon Series
+    <h1>My AI Projects
+        <link rel="stylesheet" href="style.css">
+    </h1>
+    <h2>
+        <a id="sermon-gallery-trigger" href="#sermon-gallery" class="gallery-trigger-link"
+            aria-label="Open sermon cartoon gallery" title="View Gallery">
+            1. Our Church Sermon Cartoon Series
+        </a>
+    </h2>
 
-</h2>
+    <p><strong>May 2026 ~ Present </strong></p>
 
-<p><strong>May 2026 ~ Present </strong></p>
+    <p>
+        I wanted to find a crea1. Our Church Sermon Cartoon Seritive way to encourage and inspire our church members
+        through visual storytelling.
+        One project I am working on is a church cartoon series that communicates biblical themes in an engaging and
+        accessible format. By combining storytelling, illustration, and AI-assisted tools, I hope to make sermon
+        messages more memorable and impactful.
+        Through this project, I am learning about creative design, storytelling, and how technology can support ministry
+        and community engagement.
+        This blog will document the lessons, challenges, and progress along the way.
+    </p>
 
-<p>
-I wanted to find a creative way to encourage and inspire our church members through visual storytelling.
-One project I am working on is a church cartoon series that communicates biblical themes in an engaging and accessible format. By combining storytelling, illustration, and AI-assisted tools, I hope to make sermon messages more memorable and impactful.
-Through this project, I am learning about creative design, storytelling, and how technology can support ministry and community engagement.
-This blog will document the lessons, challenges, and progress along the way.
-</p>
+    <!-- Sermon Gallery Overlay Backdrop -->
+    <div id="sermon-gallery-overlay" class="sermon-gallery-overlay" role="presentation" hidden></div>
 
+    <!-- Sermon Gallery Modal -->
+    <div id="sermon-gallery-modal" class="sermon-gallery-modal" role="dialog" aria-labelledby="gallery-title"
+        aria-modal="true" hidden>
 
-</h1>
-<h2>2. My daughter's Youtube Manhwa project 
+        <!-- Modal Header -->
+        <div class="gallery-header">
+            <h2 id="gallery-title">Sermon Cartoon Gallery</h2>
+            <button class="close-button" aria-label="Close gallery" title="Close (Esc)">
+                <span>&times;</span>
+            </button>
+        </div>
 
-</h2>
+        <!-- Series Selector Panel -->
+        <div class="series-selector" role="group" aria-label="Sermon series selector">
+            <label for="series-select">Select Sermon Series:</label>
+            <div class="series-buttons">
+                <button class="series-button" data-folder="5_4_26" aria-selected="false">May 4, 2026</button>
+                <button class="series-button" data-folder="5_10_26" aria-selected="false">May 10, 2026</button>
+                <button class="series-button" data-folder="5_17_26" aria-selected="false">May 17, 2026</button>
+                <button class="series-button" data-folder="5_24_26" aria-selected="false">May 24, 2026</button>
+                <button class="series-button" data-folder="5_31_26" aria-selected="false">May 31, 2026</button>
+                <button class="series-button" data-folder="6_7_26" aria-selected="false">June 7, 2026</button>
+                <button class="series-button" data-folder="6_21_26" aria-selected="false">June 21, 2026</button>
+                <button class="series-button" data-folder="6_28_26" aria-selected="false">June 28, 2026</button>
+                <button class="series-button" data-folder="7_5_26" aria-selected="false">July 5, 2026</button>
+            </div>
+        </div>
 
-<p><strong>July 2026 ~ Present </strong></p>
+        <!-- Thumbnails Grid View -->
+        <div class="thumbnails-view">
+            <div class="thumbnails-grid" role="region" aria-label="Sermon cartoon thumbnails">
+                <!-- Thumbnails will be populated by JS -->
+            </div>
 
-<p>
-My daughter loves creating comic books and imaginative stories. To support her creativity, I plan to launch a YouTube channel that transforms her comics into colorful, easy-to-read video stories.
-Using AI tools, I hope to enhance the artwork, add visual effects, and create human-like voice narration that brings the characters and stories to life.
-This project is a fun opportunity to combine creativity, family, storytelling, and technology.
-</p>
+            <div class="loading-spinner" hidden role="status" aria-live="polite">
+                <div class="spinner"></div>
+                <p>Loading images...</p>
+            </div>
 
-<h2>3. Openclaw Project
+            <div class="error-message" hidden role="alert">
+                Unable to load images. Please try another series.
+            </div>
+        </div>
 
-</h2>
+        <!-- Expanded Image View (minimal header with close button) -->
+        <div class="expanded-view" hidden>
+            <div class="expanded-header">
+                <button class="close-button expanded-close" aria-label="Close gallery" title="Close (Esc)">
+                    <span>&times;</span>
+                </button>
+            </div>
 
-<p><strong>July 2026 ~ Present </strong></p>
+            <div class="expanded-image-container">
+                <img id="expanded-image" src="" alt="Sermon cartoon" class="expanded-cartoon-image" />
+            </div>
 
-<p>
-Coming Soon...
-I will share updates about this project as development progresses.
-</p>
+            <div class="expanded-counter" aria-live="polite" aria-atomic="true">
+                <!-- Counter will be populated by JS -->
+            </div>
 
-<h2>4. Bible Study - ESRI story board
+            <div class="expanded-navigation" role="group" aria-label="Image navigation">
+                <button class="nav-button prev-button" aria-label="Previous image" title="Previous (Left Arrow)">
+                    ← Previous
+                </button>
 
-</h2>
+                <button class="nav-button next-button" aria-label="Next image" title="Next (Right Arrow)">
+                    Next →
+                </button>
 
-<p><strong>June 2026 ~ Present </strong></p>
+                <button class="back-button" aria-label="Back to thumbnails">
+                    Back to Grid
+                </button>
+            </div>
+        </div>
+    </div>
 
-<p>
-Coming Soon...
-This project will explore my use of GIS bible study. Things I am considering as contents are Jesus' journey map, Apostle Paul's journey map, Exodus journey map, Holy Grail Maps of Israel, turkey, etc.
-</p>
+    <script src="js/sermon-gallery.js"></script>
 
-<h2>5. Another AI Automation Pipeline
+    <h2>2. My daughter's Youtube Manhwa project
 
-</h2>
+    </h2>
 
-<p><strong>July 2026</strong></p>
+    <p><strong>July 2026 ~ Present </strong></p>
 
-<p>
-Coming Soon...
-This project will explore how AI can be integrated into automated workflows to improve productivity, streamline processes, and create practical business solutions.
-</p>
+    <p>
+        My daughter loves creating comic books and imaginative stories. To support her creativity, I plan to launch a
+        YouTube channel that transforms her comics into colorful, easy-to-read video stories.
+        Using AI tools, I hope to enhance the artwork, add visual effects, and create human-like voice narration that
+        brings the characters and stories to life.
+        This project is a fun opportunity to combine creativity, family, storytelling, and technology.
+    </p>
+
+    <h2>3. Openclaw Project
+
+    </h2>
+
+    <p><strong>July 2026 ~ Present </strong></p>
+
+    <p>
+        Coming Soon...
+        I will share updates about this project as development progresses.
+    </p>
+
+    <h2>4. Bible Study - ESRI story board
+
+    </h2>
+
+    <p><strong>June 2026 ~ Present </strong></p>
+
+    <p>
+        Coming Soon...
+        This project will explore my use of GIS bible study. Things I am considering as contents are Jesus' journey map,
+        Apostle Paul's journey map, Exodus journey map, Holy Grail Maps of Israel, turkey, etc.
+    </p>
+
+    <h2>5. Another AI Automation Pipeline
+
+    </h2>
+
+    <p><strong>July 2026</strong></p>
+
+    <p>
+        Coming Soon...
+        This project will explore how AI can be integrated into automated workflows to improve productivity, streamline
+        processes, and create practical business solutions.
+    </p>
 
 </body>
+
 </html>
