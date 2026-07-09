@@ -231,6 +231,26 @@ li a:hover {
     flex-direction: column;
 }
 
+.sermon-gallery-modal.expanded-fullscreen {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    border-radius: 0;
+    border: none;
+    background: #000;
+    max-height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .sermon-gallery-modal[hidden] {
     display: none;
 }
@@ -515,7 +535,7 @@ li a:hover {
 
 .thumbnails-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 16px;
     padding: 8px;
 }
@@ -562,10 +582,23 @@ li a:hover {
     padding: 24px;
     background: #0f0f0f;
     flex: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 .expanded-view[hidden] {
     display: none;
+}
+
+.sermon-gallery-modal.expanded-fullscreen .expanded-view {
+    padding: 0;
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .expanded-header {
@@ -573,6 +606,14 @@ li a:hover {
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 12px;
+}
+
+.sermon-gallery-modal.expanded-fullscreen .expanded-header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-bottom: 0;
+    z-index: 1001;
 }
 
 .expanded-close {
@@ -601,6 +642,15 @@ li a:hover {
     outline-offset: 2px;
 }
 
+.sermon-gallery-modal.expanded-fullscreen .expanded-close {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 2.5rem;
+}
+
+.sermon-gallery-modal.expanded-fullscreen .expanded-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .expanded-image-container {
     display: flex;
     align-items: center;
@@ -622,6 +672,34 @@ li a:hover {
     max-height: 500px;
 }
 
+.sermon-gallery-modal.expanded-fullscreen .expanded-image-container {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    background: #000;
+    border-radius: 0;
+    padding: 40px 20px;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sermon-gallery-modal.expanded-fullscreen .expanded-cartoon-image {
+    max-width: 80vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+}
+
+.expanded-cartoon-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    max-height: 500px;
+}
+
 .expanded-counter {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
@@ -631,10 +709,24 @@ li a:hover {
     letter-spacing: -0.5px;
 }
 
+.sermon-gallery-modal.expanded-fullscreen .expanded-counter {
+    display: none;
+}
+
 .expanded-navigation {
     display: flex;
     justify-content: center;
     gap: 12px;
+    flex-wrap: wrap;
+}
+
+.sermon-gallery-modal.expanded-fullscreen .expanded-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px 0;
+    background: #000;
+    width: 100%;
     flex-wrap: wrap;
 }
 
@@ -662,6 +754,20 @@ li a:hover {
 .back-button:focus-visible {
     outline: 3px solid #a5b4fc;
     outline-offset: 2px;
+}
+
+.sermon-gallery-modal.expanded-fullscreen .back-button {
+    display: none;
+}
+
+.sermon-gallery-modal.expanded-fullscreen .nav-button {
+    font-size: 1.5rem;
+    padding: 16px 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sermon-gallery-modal.expanded-fullscreen .nav-button:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Desktop Responsive Breakpoint (1024px and wider) */

@@ -125,7 +125,7 @@ class SermonGallery {
             '5_31_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
             '6_7_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
             '6_21_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
-            '6_28_26': ['1.jpg', '1.png', '2.jpg', '3.jpg', '3.png', '4.jpg'],
+            '6_28_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
             '7_5_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
         };
 
@@ -177,6 +177,9 @@ class SermonGallery {
         // Show header and series selector in thumbnail view
         document.querySelector('.gallery-header').style.display = 'flex';
         document.querySelector('.series-selector').style.display = 'block';
+
+        // Remove fullscreen mode
+        this.modal.classList.remove('expanded-fullscreen');
     }
 
     viewExpanded() {
@@ -187,6 +190,9 @@ class SermonGallery {
         // Hide header and series selector in expanded view
         document.querySelector('.gallery-header').style.display = 'none';
         document.querySelector('.series-selector').style.display = 'none';
+
+        // Enable fullscreen mode
+        this.modal.classList.add('expanded-fullscreen');
 
         this.displayExpandedImage();
     }
