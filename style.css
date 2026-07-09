@@ -204,31 +204,23 @@ li a:hover {
 .sermon-gallery-overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
     cursor: pointer;
 }
 
-.sermon-gallery-overlay[hidden] {
-    display: none;
-}
-
-/* Modal Container */
 .sermon-gallery-modal {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
-    border: 1px solid #333;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    max-height: 85vh;
-    overflow-y: auto;
-    max-width: 90%;
-    display: flex;
+    inset: 0;
+    z-index: 1001;
+    display: none;
     flex-direction: column;
+    padding: 32px;
+    overflow-y: auto;
+    margin: auto;
+}
+.sermon-gallery-modal:not([hidden]) {
+    display: flex;
 }
 
 .sermon-gallery-modal.expanded-fullscreen {
@@ -249,8 +241,11 @@ li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: flex;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
-
 .sermon-gallery-modal[hidden] {
     display: none;
 }
@@ -576,19 +571,44 @@ li a:hover {
 
 /* Expanded View */
 .expanded-view {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px;
-    background: #0f0f0f;
+    display: none;
     flex: 1;
+    min-height: 0;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: auto;
+    max-width: 100%;
+}
+.expanded-view:not([hidden]) {
+    display: flex;
 }
 
-.expanded-view[hidden] {
-    display: none;
+.expanded-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+    min-height: 0;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    flex: 1;
+    outline: 3px solid lime;
 }
+
+
+#expanded-image {
+    max-width: 90vw;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 0;
+    border: none;
+}
+
+
 
 .sermon-gallery-modal.expanded-fullscreen .expanded-view {
     padding: 0;
@@ -613,21 +633,7 @@ li a:hover {
     top: 20px;
     right: 20px;
     margin-bottom: 0;
-    z-index: 1001;
-}
-
-.expanded-view {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-#expanded-image {
-    max-width: 90vw;
-    max-height: 75vh;
-    object-fit: contain;
+    z-index: 9999;
 }
 
 .expanded-close {
@@ -644,6 +650,8 @@ li a:hover {
     justify-content: center;
     border-radius: 4px;
     transition: all 0.2s ease;
+    position: relative;
+    z-index: 9999;
 }
 
 .expanded-close:hover {
@@ -665,18 +673,6 @@ li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.expanded-image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 300px;
-    background: #1a1a1a;
-    border-radius: 8px;
-    overflow: hidden;
-    padding: 20px;
-    flex: 1;
-}
 
 .expanded-cartoon-image {
     max-width: 100%;
@@ -704,14 +700,6 @@ li a:hover {
     max-height: 80vh;
     width: auto;
     height: auto;
-}
-
-.expanded-cartoon-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 4px;
-    max-height: 500px;
 }
 
 .expanded-counter {
@@ -783,6 +771,16 @@ li a:hover {
 .sermon-gallery-modal.expanded-fullscreen .nav-button:hover:not(:disabled) {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+.expanded-view {
+    outline: 3px solid red;
+}
+
+
+#expanded-image {
+    outline: 3px solid cyan;
+}
+.sermon-gallery-modal {2    border: 5px solid yellow;3    align-items: center;4    justify-content: center;5}
 
 /* Desktop Responsive Breakpoint (1024px and wider) */
 @media (min-width: 1024px) {

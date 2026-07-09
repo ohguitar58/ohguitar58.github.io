@@ -101,9 +101,14 @@ class SermonGallery {
     }
 
     closeModal() {
+        this.modal.classList.remove('expanded-fullscreen');
+    
         this.modal.setAttribute('hidden', '');
         this.overlay.setAttribute('hidden', '');
-        this.trigger.focus(); // Return focus to trigger
+    
+        this.viewThumbnails();
+    
+        this.trigger.focus();
     }
 
     selectFolder(folderPath) {
