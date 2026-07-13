@@ -50,6 +50,13 @@ class SermonGallery {
             this.openModal();
         });
 
+        document.querySelectorAll('.gallery-open-link').forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                this.openModal();
+            });
+        });
+
         this.closeButton.addEventListener('click', () => this.closeModal());
         this.expandedClose.addEventListener('click', () => this.closeModal());
         this.overlay.addEventListener('click', () => this.closeModal());
