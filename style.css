@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 20px;
+}
+
 body {
     color: #f5f5f5;
 
@@ -172,7 +176,7 @@ li a:hover {
     background: var(--home-bg);
     color: var(--home-text);
     font-family: 'Inter', sans-serif;
-    font-size: 17.6px;
+    font-size: 32px;
     line-height: 1.6;
 }
 
@@ -217,7 +221,7 @@ li a:hover {
 
 /* Professional homepage */
 .site-shell {
-    width: min(1180px, calc(100% - 80px));
+    width: min(1360px, calc(100% - 80px));
     margin-inline: auto;
 }
 
@@ -333,7 +337,7 @@ li a:hover {
     margin: 0;
     color: var(--home-text);
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(3.2rem, 7vw, 6.5rem);
+    font-size: clamp(71.7px, 5.6vw, 145.6px);
     font-style: normal;
     font-weight: 500;
     line-height: 0.99;
@@ -616,7 +620,7 @@ li a:hover {
     }
 
     .site-shell {
-        width: min(100% - 40px, 1180px);
+        width: min(100% - 40px, 1360px);
     }
 
     .home-nav {
@@ -643,7 +647,7 @@ li a:hover {
     }
 
     .home-hero h1 {
-        font-size: clamp(2.85rem, 14vw, 4.25rem);
+        font-size: clamp(48px, 14vw, 119px);
         line-height: 1.02;
     }
 
@@ -707,7 +711,7 @@ li a:hover {
     background: var(--home-bg);
     color: var(--home-text);
     font-family: 'Inter', sans-serif;
-    font-size: 17.6px;
+    font-size: 32px;
     line-height: 1.6;
 }
 
@@ -724,7 +728,7 @@ li a:hover {
     margin: 0;
     color: var(--home-text);
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(3.4rem, 8vw, 7.2rem);
+    font-size: clamp(76.2px, 6.4vw, 161.3px);
     font-style: normal;
     font-weight: 500;
     line-height: 0.98;
@@ -990,7 +994,7 @@ li a:hover {
     }
 
     .site-page .page-hero h1 {
-        font-size: clamp(2.9rem, 14vw, 5rem);
+        font-size: clamp(48px, 14vw, 140px);
         line-height: 1.02;
     }
 
@@ -1420,9 +1424,12 @@ li a:hover {
 }
 
 .thumbnails-grid {
+    width: 100%;
+    max-width: 920px;
+    margin-inline: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
     padding: 8px;
 }
 
@@ -1686,14 +1693,14 @@ li a:hover {
 /* Desktop Responsive Breakpoint (1024px and wider) */
 @media (min-width: 1024px) {
     .sermon-gallery-modal {
-        width: min(85%, 1200px);
+        width: min(92%, 1380px);
     }
 }
 
 /* Tablet Responsive Breakpoint (600px to 1023px) */
 @media (min-width: 600px) and (max-width: 1023px) {
     .sermon-gallery-modal {
-        width: 90%;
+        width: 94%;
     }
 
     .series-buttons {
@@ -1791,6 +1798,7 @@ li a:hover {
     }
 
     .thumbnails-grid {
+        max-width: none;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
         padding: 0;
