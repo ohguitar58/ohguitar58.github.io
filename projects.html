@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="projects.html">Projects</a> |
-    <a href="contact.html">Contact</a>
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Jonathan Oh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body class="projects-page">
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="projects.html">Projects</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+
     <hr>
 
-    <h1>My AI Projects
-        <link rel="stylesheet" href="style.css">
-    </h1>
+    <h1>My AI Projects</h1>
     <h2>
         <a id="sermon-gallery-trigger" href="#sermon-gallery" class="gallery-trigger-link"
             aria-label="Open sermon cartoon gallery" title="View Gallery">
@@ -24,7 +32,7 @@
     <p><strong>May 2026 ~ Present </strong></p>
 
     <p>
-        I wanted to find a crea1. Our Church Sermon Cartoon Seritive way to encourage and inspire our church members
+        I wanted to find a creative way to encourage and inspire our church members
         through visual storytelling.
         One project I am working on is a church cartoon series that communicates biblical themes in an engaging and
         accessible format. By combining storytelling, illustration, and AI-assisted tools, I hope to make sermon
@@ -39,7 +47,7 @@
 
     <!-- Sermon Gallery Modal -->
     <div id="sermon-gallery-modal" class="sermon-gallery-modal" role="dialog" aria-labelledby="gallery-title"
-        aria-modal="true" hidden>
+        aria-modal="true" tabindex="-1" hidden>
 
         <!-- Modal Header -->
         <div class="gallery-header">
@@ -91,6 +99,9 @@
 
             <div class="expanded-image-container">
                 <img id="expanded-image" src="" alt="Sermon cartoon" class="expanded-cartoon-image" />
+                <p id="expanded-image-error" class="expanded-image-error" role="alert" hidden>
+                    This image could not be loaded.
+                </p>
             </div>
 
             <div class="expanded-counter" aria-live="polite" aria-atomic="true">
