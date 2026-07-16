@@ -39,6 +39,7 @@ class SermonGallery {
             '6_21_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
             '6_28_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
             '7_5_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+            '7_12_26': ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
         };
 
         this.init();
