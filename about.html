@@ -1,71 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="about.title">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Jonathan Oh's background in business intelligence, data engineering, machine learning, and AI.">
+    <meta name="description" data-i18n-content="about.description" content="Learn about Jonathan Oh's background in business intelligence, data engineering, machine learning, and AI.">
     <title>About — Jonathan Oh</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="js/i18n.js" defer></script>
 </head>
 
 <body class="site-page about-page">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip">Skip to content</a>
 
     <header class="home-header">
         <div class="site-shell home-nav">
             <a class="home-brand" href="index.html" aria-label="Jonathan Oh, home">JO<span>.</span></a>
-            <nav class="primary-nav" aria-label="Primary navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html" aria-current="page">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+            <nav class="primary-nav" data-i18n-aria-label="nav.label" aria-label="Primary navigation">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="about.html" aria-current="page" data-i18n="nav.about">About</a>
+                <a href="projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
             </nav>
+            <div data-language-control></div>
         </div>
     </header>
 
     <main id="main-content" class="page-main">
-        <section class="site-shell page-hero" aria-labelledby="page-title">
-            <p class="eyebrow">About</p>
-            <h1 id="page-title">Data experience.<br>Practical curiosity.</h1>
-            <p class="page-intro">
-                I’m a data and business intelligence professional interested in making complex technology useful,
-                understandable, and connected to real people.
-            </p>
+        <section class="site-shell page-hero compact-page-hero">
+            <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+            <p class="page-intro" data-i18n="about.intro">I’m a data and business intelligence professional interested in making complex technology useful, understandable, and connected to real people.</p>
         </section>
 
         <section class="site-shell page-section profile-section" aria-labelledby="story-title">
             <div class="profile-image-wrap">
-                <img class="profile-image" src="images/jonathan.jpg" alt="Jonathan Oh" width="480" height="480">
+                <img class="profile-image" src="images/jonathan.jpg" data-i18n-alt="about.imageAlt" alt="Jonathan Oh" width="480" height="480">
             </div>
             <div class="profile-copy">
-                <p class="eyebrow">My background</p>
-                <h2 id="story-title">Building on a foundation in business intelligence and data.</h2>
-                <p>
-                    My experience spans business intelligence, data engineering, and machine learning. That background
-                    taught me how to turn information into systems that help people understand, decide, and act.
-                </p>
-                <p>
-                    Today, I’m exploring local and cloud AI, automation, visual storytelling, and geographic tools. I
-                    learn by building practical projects for creativity, ministry, family, and community.
-                </p>
+                <p class="eyebrow" data-i18n="about.background">My background</p>
+                <h2 id="story-title" data-i18n="about.storyHeading">Building on a foundation in business intelligence and data.</h2>
+                <p data-i18n="about.story1">My experience spans business intelligence, data engineering, and machine learning. That background taught me how to turn information into systems that help people understand, decide, and act.</p>
+                <p data-i18n="about.story2">Today, I’m exploring local and cloud AI, automation, visual storytelling, and geographic tools. I learn by building practical projects for creativity, ministry, family, and community.</p>
             </div>
         </section>
 
         <section class="site-shell page-section" aria-labelledby="focus-title">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">What I work with</p>
-                    <h2 id="focus-title">Tools and technologies</h2>
+                    <p class="eyebrow" data-i18n="about.tools">What I work with</p>
+                    <h2 id="focus-title" data-i18n="about.toolsHeading">Tools and technologies</h2>
                 </div>
             </div>
-            <ul class="technology-list" aria-label="Technologies">
+            <ul class="technology-list" data-i18n-aria-label="about.technologies" aria-label="Technologies">
                 <li>Python</li>
                 <li>Business intelligence</li>
                 <li>Data engineering</li>
@@ -80,20 +72,20 @@
 
         <section class="site-shell page-section page-cta" aria-labelledby="cta-title">
             <div>
-                <p class="eyebrow">See the work</p>
-                <h2 id="cta-title">Follow the ideas as they become projects.</h2>
+                    <p class="eyebrow" data-i18n="about.ctaEyebrow">See the work</p>
+                    <h2 id="cta-title" data-i18n="about.ctaHeading">Follow the ideas as they become projects.</h2>
             </div>
-            <a class="button button-primary" href="projects.html">Explore projects <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="projects.html"><span data-i18n="about.cta">Explore projects</span> <span aria-hidden="true">↗</span></a>
         </section>
     </main>
 
     <footer class="home-footer">
         <div class="site-shell footer-inner">
-            <p>© 2026 Jonathan Oh</p>
+            <p data-i18n="footer.copyright">© 2026 Jonathan Oh</p>
             <div class="footer-links">
                 <a href="https://github.com/ohguitar58" target="_blank" rel="noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/jonathan-c-oh-38995641/" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="mailto:choh76@gmail.com">Email</a>
+                <a href="mailto:choh76@gmail.com" data-i18n="footer.email">Email</a>
             </div>
         </div>
     </footer>

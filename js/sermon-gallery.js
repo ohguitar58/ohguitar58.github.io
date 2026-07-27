@@ -70,6 +70,14 @@ class SermonGallery {
         this.nextButton.addEventListener('click', () => this.nextImage());
         this.backButton.addEventListener('click', () => this.viewThumbnails());
         document.addEventListener('keydown', (event) => this.handleKeydown(event));
+        document.addEventListener('languagechange', () => {
+            if (this.modal.hidden) return;
+            if (this.state.viewMode === 'expanded') {
+                this.displayExpandedImage();
+            } else {
+                this.renderThumbnails();
+            }
+        });
     }
 
     openModal() {
@@ -152,7 +160,7 @@ class SermonGallery {
         this.hideError();
 
         if (this.state.imageList.length === 0) {
-            this.showError('No images are available for this series.');
+            this.showError(this.translate('gallery.noImages'));
             return;
         }
 
@@ -170,21 +178,21 @@ class SermonGallery {
             item.className = 'thumbnail-item';
             item.type = 'button';
             item.dataset.imageIndex = String(index);
-            item.setAttribute('aria-label', `View image ${index + 1} of ${this.state.imageList.length}`);
+            item.setAttribute('aria-label', `${this.translate('gallery.viewImage')} ${index + 1} ${this.translate('gallery.of')} ${this.state.imageList.length}`);
 
             const image = document.createElement('img');
-            image.alt = `Sermon cartoon ${index + 1}`;
+            image.alt = `${this.translate('gallery.cartoon')} ${index + 1}`;
             image.loading = 'lazy';
             image.addEventListener('load', markImageComplete, { once: true });
             image.addEventListener('error', () => {
                 item.classList.add('thumbnail-load-error');
                 item.disabled = true;
-                item.setAttribute('aria-label', `Image ${index + 1} could not be loaded`);
+                item.setAttribute('aria-label', `${this.translate('gallery.cartoon')} ${index + 1} ${this.translate('gallery.loadFailed')}`);
                 image.remove();
 
                 const errorText = document.createElement('span');
                 errorText.className = 'thumbnail-error-text';
-                errorText.textContent = 'Image unavailable';
+                errorText.textContent = this.translate('gallery.unavailable');
                 item.appendChild(errorText);
                 markImageComplete();
             }, { once: true });
@@ -233,14 +241,14 @@ class SermonGallery {
         const imageName = this.state.imageList[this.state.currentImageIndex];
         this.expandedImageError.setAttribute('hidden', '');
         this.expandedImage.removeAttribute('hidden');
-        this.expandedImage.alt = `Sermon cartoon from ${this.state.activeFolder} (${this.state.currentImageIndex + 1} of ${this.state.imageList.length})`;
+        this.expandedImage.alt = `${this.translate('gallery.cartoon')} (${this.state.currentImageIndex + 1} ${this.translate('gallery.of')} ${this.state.imageList.length})`;
         this.expandedImage.onload = () => this.expandedImageError.setAttribute('hidden', '');
         this.expandedImage.onerror = () => {
             this.expandedImage.setAttribute('hidden', '');
             this.expandedImageError.removeAttribute('hidden');
         };
         this.expandedImage.src = this.imagePath(imageName);
-        this.expandedCounter.textContent = `Image ${this.state.currentImageIndex + 1} of ${this.state.imageList.length}`;
+        this.expandedCounter.textContent = `${this.translate('gallery.imageCount')} ${this.state.currentImageIndex + 1} ${this.translate('gallery.of')} ${this.state.imageList.length}`;
         this.prevButton.disabled = this.state.currentImageIndex === 0;
         this.nextButton.disabled = this.state.currentImageIndex === this.state.imageList.length - 1;
     }
@@ -281,6 +289,10 @@ class SermonGallery {
 
     hideError() {
         this.errorMessage.classList.remove('show');
+    }
+
+    translate(key) {
+        return window.siteI18n?.translate(key) ?? key;
     }
 }
 

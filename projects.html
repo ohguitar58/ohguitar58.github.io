@@ -1,50 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="projects.title">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Jonathan Oh's projects in AI, automation, visual storytelling, and geographic learning.">
+    <meta name="description" data-i18n-content="projects.description" content="Explore Jonathan Oh's projects in AI, automation, visual storytelling, and geographic learning.">
     <title>Projects — Jonathan Oh</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="js/i18n.js" defer></script>
 </head>
 
 <body class="site-page projects-page">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip">Skip to content</a>
 
     <header class="home-header">
         <div class="site-shell home-nav">
             <a class="home-brand" href="index.html" aria-label="Jonathan Oh, home">JO<span>.</span></a>
-            <nav class="primary-nav" aria-label="Primary navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html" aria-current="page">Projects</a>
-                <a href="contact.html">Contact</a>
+            <nav class="primary-nav" data-i18n-aria-label="nav.label" aria-label="Primary navigation">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="about.html" data-i18n="nav.about">About</a>
+                <a href="projects.html" aria-current="page" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
             </nav>
+            <div data-language-control></div>
         </div>
     </header>
 
     <main id="main-content" class="page-main">
-        <section class="site-shell page-hero" aria-labelledby="page-title">
-            <p class="eyebrow">Projects</p>
-            <h1 id="page-title">Experiments becoming practical systems.</h1>
-            <p class="page-intro">
-                A growing collection of work across AI-assisted creativity, family storytelling, local automation,
-                geographic learning, and useful business workflows.
-            </p>
+        <section class="site-shell page-hero compact-page-hero">
+            <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
+            <p class="page-intro" data-i18n="projects.intro">A growing collection of work across AI-assisted creativity, family storytelling, local automation, geographic learning, and useful business workflows.</p>
         </section>
 
         <section class="site-shell page-section projects-section" aria-labelledby="project-list-title">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">Selected work</p>
-                    <h2 id="project-list-title">What I’m building</h2>
+                    <p class="eyebrow" data-i18n="projects.selected">Selected work</p>
+                    <h2 id="project-list-title" data-i18n="projects.listHeading">What I’m building</h2>
                 </div>
             </div>
 
@@ -52,22 +50,18 @@
                 <article class="project-detail project-featured">
                     <div class="project-detail-meta">
                         <span>01</span>
-                        <span class="project-status">Active</span>
+                        <span class="project-status" data-i18n="status.active">Active</span>
                     </div>
                     <div class="project-detail-content">
-                        <p class="project-date">May 2026 — Present</p>
+                        <p class="project-date" data-i18n="projects.project1.date">May 2026 — Present</p>
                         <h3>
-                            <a id="sermon-gallery-trigger" href="#sermon-gallery" aria-label="Open sermon cartoon gallery">
-                                Church Sermon Cartoon Series <span aria-hidden="true">↗</span>
+                            <a id="sermon-gallery-trigger" href="#sermon-gallery" data-i18n-aria-label="gallery.open" aria-label="Open sermon cartoon gallery">
+                                <span data-i18n="projects.project1.title">Church Sermon Cartoon Series</span> <span aria-hidden="true">↗</span>
                             </a>
                         </h3>
-                        <p>
-                            An AI-assisted cartoon series that translates weekly sermon themes into approachable visual
-                            stories. The work combines storytelling, illustration, and technology to help messages stay
-                            memorable and encourage community engagement.
-                        </p>
+                        <p data-i18n="projects.project1.description">An AI-assisted cartoon series that translates weekly sermon themes into approachable visual stories. The work combines storytelling, illustration, and technology to help messages stay memorable and encourage community engagement.</p>
                         <a class="text-link gallery-open-link" href="#sermon-gallery">
-                            Open gallery <span aria-hidden="true">→</span>
+                            <span data-i18n="projects.openGallery">Open gallery</span> <span aria-hidden="true">→</span>
                         </a>
                     </div>
                 </article>
@@ -75,60 +69,48 @@
                 <article class="project-detail">
                     <div class="project-detail-meta">
                         <span>02</span>
-                        <span class="project-status">In progress</span>
+                        <span class="project-status" data-i18n="status.progress">In progress</span>
                     </div>
                     <div class="project-detail-content">
-                        <p class="project-date">July 2026 — Present</p>
-                        <h3>Comic-to-Video Project</h3>
-                        <p>
-                            A family creative project transforming my daughter’s original comics into colorful,
-                            easy-to-follow video stories with enhanced artwork, visual effects, and natural narration.
-                        </p>
+                        <p class="project-date" data-i18n="projects.project2.date">July 2026 — Present</p>
+                        <h3 data-i18n="projects.project2.title">Comic-to-Video Project</h3>
+                        <p data-i18n="projects.project2.description">A family creative project transforming my daughter’s original comics into colorful, easy-to-follow video stories with enhanced artwork, visual effects, and natural narration.</p>
                     </div>
                 </article>
 
                 <article class="project-detail">
                     <div class="project-detail-meta">
                         <span>03</span>
-                        <span class="project-status">In progress</span>
+                        <span class="project-status" data-i18n="status.progress">In progress</span>
                     </div>
                     <div class="project-detail-content">
-                        <p class="project-date">July 2026 — Present</p>
-                        <h3>Raspberry Pi OpenClaw</h3>
-                        <p>
-                            A hands-on exploration of local AI and automation using Raspberry Pi hardware. More details
-                            will be added as the setup and experiments progress.
-                        </p>
+                        <p class="project-date" data-i18n="projects.project3.date">July 2026 — Present</p>
+                        <h3 data-i18n="projects.project3.title">Raspberry Pi OpenClaw</h3>
+                        <p data-i18n="projects.project3.description">A hands-on exploration of local AI and automation using Raspberry Pi hardware. More details will be added as the setup and experiments progress.</p>
                     </div>
                 </article>
 
                 <article class="project-detail">
                     <div class="project-detail-meta">
                         <span>04</span>
-                        <span class="project-status">Exploring</span>
+                        <span class="project-status" data-i18n="status.exploring">Exploring</span>
                     </div>
                     <div class="project-detail-content">
-                        <p class="project-date">June 2026 — Present</p>
-                        <h3>Bible Study Maps</h3>
-                        <p>
-                            Geographic storytelling for biblical journeys and historical places, including the travels
-                            of Jesus and Paul, the Exodus, and important locations across Israel and Türkiye.
-                        </p>
+                        <p class="project-date" data-i18n="projects.project4.date">June 2026 — Present</p>
+                        <h3 data-i18n="projects.project4.title">Bible Study Maps</h3>
+                        <p data-i18n="projects.project4.description">Geographic storytelling for biblical journeys and historical places, including the travels of Jesus and Paul, the Exodus, and important locations across Israel and Türkiye.</p>
                     </div>
                 </article>
 
                 <article class="project-detail">
                     <div class="project-detail-meta">
                         <span>05</span>
-                        <span class="project-status">Exploring</span>
+                        <span class="project-status" data-i18n="status.exploring">Exploring</span>
                     </div>
                     <div class="project-detail-content">
-                        <p class="project-date">July 2026</p>
-                        <h3>AI Automation Pipeline</h3>
-                        <p>
-                            An exploration of practical AI workflows that improve productivity, streamline repeated
-                            processes, and support useful business solutions.
-                        </p>
+                        <p class="project-date" data-i18n="projects.project5.date">July 2026</p>
+                        <h3 data-i18n="projects.project5.title">AI Automation Pipeline</h3>
+                        <p data-i18n="projects.project5.description">An exploration of practical AI workflows that improve productivity, streamline repeated processes, and support useful business solutions.</p>
                     </div>
                 </article>
             </div>
@@ -140,42 +122,42 @@
     <div id="sermon-gallery-modal" class="sermon-gallery-modal" role="dialog" aria-labelledby="gallery-title"
         aria-modal="true" tabindex="-1" hidden>
         <div class="gallery-header">
-            <h2 id="gallery-title">Sermon Cartoon Gallery</h2>
-            <button class="close-button" aria-label="Close gallery" title="Close (Esc)">
+            <h2 id="gallery-title" data-i18n="gallery.title">Sermon Cartoon Gallery</h2>
+            <button class="close-button" data-i18n-aria-label="gallery.close" data-i18n-title="gallery.closeTitle" aria-label="Close gallery" title="Close (Esc)">
                 <span>&times;</span>
             </button>
         </div>
 
-        <div class="series-selector" role="group" aria-label="Sermon series selector">
-            <p class="series-label">Select sermon series</p>
+        <div class="series-selector" role="group" data-i18n-aria-label="gallery.selector" aria-label="Sermon series selector">
+            <p class="series-label" data-i18n="gallery.select">Select sermon series</p>
             <div class="series-buttons">
-                <button class="series-button" data-folder="5_4_26" aria-selected="false">May 4, 2026</button>
-                <button class="series-button" data-folder="5_10_26" aria-selected="false">May 10, 2026</button>
-                <button class="series-button" data-folder="5_17_26" aria-selected="false">May 17, 2026</button>
-                <button class="series-button" data-folder="5_24_26" aria-selected="false">May 24, 2026</button>
-                <button class="series-button" data-folder="5_31_26" aria-selected="false">May 31, 2026</button>
-                <button class="series-button" data-folder="6_7_26" aria-selected="false">June 7, 2026</button>
-                <button class="series-button" data-folder="6_21_26" aria-selected="false">June 21, 2026</button>
-                <button class="series-button" data-folder="6_28_26" aria-selected="false">June 28, 2026</button>
-                <button class="series-button" data-folder="7_5_26" aria-selected="false">July 5, 2026</button>
-                <button class="series-button" data-folder="7_12_26" aria-selected="false">July 12, 2026</button>
+                <button class="series-button" data-folder="5_4_26" data-i18n="gallery.date.5_4_26" aria-selected="false">May 4, 2026</button>
+                <button class="series-button" data-folder="5_10_26" data-i18n="gallery.date.5_10_26" aria-selected="false">May 10, 2026</button>
+                <button class="series-button" data-folder="5_17_26" data-i18n="gallery.date.5_17_26" aria-selected="false">May 17, 2026</button>
+                <button class="series-button" data-folder="5_24_26" data-i18n="gallery.date.5_24_26" aria-selected="false">May 24, 2026</button>
+                <button class="series-button" data-folder="5_31_26" data-i18n="gallery.date.5_31_26" aria-selected="false">May 31, 2026</button>
+                <button class="series-button" data-folder="6_7_26" data-i18n="gallery.date.6_7_26" aria-selected="false">June 7, 2026</button>
+                <button class="series-button" data-folder="6_21_26" data-i18n="gallery.date.6_21_26" aria-selected="false">June 21, 2026</button>
+                <button class="series-button" data-folder="6_28_26" data-i18n="gallery.date.6_28_26" aria-selected="false">June 28, 2026</button>
+                <button class="series-button" data-folder="7_5_26" data-i18n="gallery.date.7_5_26" aria-selected="false">July 5, 2026</button>
+                <button class="series-button" data-folder="7_12_26" data-i18n="gallery.date.7_12_26" aria-selected="false">July 12, 2026</button>
             </div>
         </div>
 
         <div class="thumbnails-view">
-            <div class="thumbnails-grid" role="region" aria-label="Sermon cartoon thumbnails"></div>
+            <div class="thumbnails-grid" role="region" data-i18n-aria-label="gallery.thumbnails" aria-label="Sermon cartoon thumbnails"></div>
             <div class="loading-spinner" hidden role="status" aria-live="polite">
                 <div class="spinner"></div>
-                <p>Loading images...</p>
+                <p data-i18n="gallery.loading">Loading images...</p>
             </div>
             <div class="error-message" hidden role="alert">
-                Unable to load images. Please try another series.
+                <span data-i18n="gallery.loadError">Unable to load images. Please try another series.</span>
             </div>
         </div>
 
         <div class="expanded-view" hidden>
             <div class="expanded-header">
-                <button class="close-button expanded-close" aria-label="Close gallery" title="Close (Esc)">
+                <button class="close-button expanded-close" data-i18n-aria-label="gallery.close" data-i18n-title="gallery.closeTitle" aria-label="Close gallery" title="Close (Esc)">
                     <span>&times;</span>
                 </button>
             </div>
@@ -187,24 +169,24 @@
             </div>
             <div class="expanded-counter" aria-live="polite" aria-atomic="true"></div>
             <div class="expanded-navigation" role="group" aria-label="Image navigation">
-                <button class="nav-button prev-button" aria-label="Previous image" title="Previous (Left Arrow)">
-                    ← Previous
+                <button class="nav-button prev-button" data-i18n-aria-label="gallery.previous" data-i18n-title="gallery.previousTitle" aria-label="Previous image" title="Previous (Left Arrow)">
+                    ← <span data-i18n="gallery.previous">Previous</span>
                 </button>
-                <button class="nav-button next-button" aria-label="Next image" title="Next (Right Arrow)">
-                    Next →
+                <button class="nav-button next-button" data-i18n-aria-label="gallery.next" data-i18n-title="gallery.nextTitle" aria-label="Next image" title="Next (Right Arrow)">
+                    <span data-i18n="gallery.next">Next</span> →
                 </button>
-                <button class="back-button" aria-label="Back to thumbnails">Back to Grid</button>
+                <button class="back-button" data-i18n="gallery.back" data-i18n-aria-label="gallery.back" aria-label="Back to thumbnails">Back to Grid</button>
             </div>
         </div>
     </div>
 
     <footer class="home-footer">
         <div class="site-shell footer-inner">
-            <p>© 2026 Jonathan Oh</p>
+            <p data-i18n="footer.copyright">© 2026 Jonathan Oh</p>
             <div class="footer-links">
                 <a href="https://github.com/ohguitar58" target="_blank" rel="noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/jonathan-c-oh-38995641/" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="mailto:choh76@gmail.com">Email</a>
+                <a href="mailto:choh76@gmail.com" data-i18n="footer.email">Email</a>
             </div>
         </div>
     </footer>

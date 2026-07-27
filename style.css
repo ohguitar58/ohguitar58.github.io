@@ -306,6 +306,119 @@ li a:hover {
     background: var(--home-accent);
 }
 
+.language-switcher {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.language-switcher summary {
+    min-width: 66px;
+    min-height: 38px;
+    padding: 7px 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid var(--home-border);
+    border-radius: 999px;
+    color: var(--home-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    list-style: none;
+}
+
+.language-switcher summary::-webkit-details-marker {
+    display: none;
+}
+
+.language-switcher summary:hover,
+.language-switcher[open] summary {
+    border-color: var(--home-accent);
+    color: var(--home-text);
+}
+
+.language-switcher summary:focus-visible,
+.language-switcher button:focus-visible {
+    outline: 2px solid var(--home-accent);
+    outline-offset: 3px;
+}
+
+.language-switcher svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+}
+
+.language-switcher:not([open]) .language-menu {
+    display: none;
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 20;
+    min-width: 116px;
+    padding: 5px;
+    display: grid;
+    border: 1px solid var(--home-border);
+    border-radius: 8px;
+    background: var(--home-surface);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
+}
+
+.language-menu button {
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--home-muted);
+    font: inherit;
+    font-size: 0.75rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.language-menu button:hover,
+.language-menu button[aria-pressed="true"] {
+    background: var(--home-accent-dark);
+    color: var(--home-text);
+}
+
+html[lang="ko"] body,
+html[lang="ko"] .home-page,
+html[lang="ko"] .site-page,
+html[lang="ko"] h1,
+html[lang="ko"] h2,
+html[lang="ko"] h3,
+html[lang="ko"] p,
+html[lang="ko"] .home-brand,
+html[lang="ko"] .button {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html[lang="ko"] .eyebrow,
+html[lang="ko"] .project-status,
+html[lang="ko"] .project-date,
+html[lang="ko"] .contact-label {
+    letter-spacing: 0.04em;
+}
+
+html[lang="ko"] .home-hero h1,
+html[lang="ko"] .site-page .page-hero h1,
+html[lang="ko"] .home-section h2,
+html[lang="ko"] .profile-copy h2,
+html[lang="ko"] .page-cta h2,
+html[lang="ko"] .contact-section .section-heading h2,
+html[lang="ko"] .project-detail-content h3 {
+    letter-spacing: -0.04em;
+    line-height: 1.22;
+}
+
 .home-page a:focus-visible {
     outline: 2px solid var(--home-accent);
     outline-offset: 5px;
@@ -442,6 +555,10 @@ li a:hover {
     gap: 30px;
 }
 
+.section-heading--compact .eyebrow {
+    margin-bottom: 0;
+}
+
 .home-section h2 {
     max-width: 780px;
     margin: 0;
@@ -534,6 +651,11 @@ li a:hover {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.75fr);
     gap: 100px;
+}
+
+.about-preview--compact {
+    grid-template-columns: 180px minmax(300px, 650px);
+    justify-content: space-between;
 }
 
 .about-preview-copy {
@@ -746,6 +868,14 @@ li a:hover {
     letter-spacing: -0.015em;
 }
 
+.site-page .compact-page-hero {
+    padding-block: 96px;
+}
+
+.site-page .compact-page-hero .page-intro {
+    margin-top: 0;
+}
+
 .site-page .page-section {
     padding-block: 100px;
     border-top: 1px solid var(--home-border);
@@ -852,6 +982,10 @@ li a:hover {
 
 .contact-section {
     border-top: 0;
+}
+
+.compact-contact-section > .eyebrow {
+    margin-bottom: 32px;
 }
 
 .contact-section .section-heading h2 {
@@ -991,6 +1125,10 @@ li a:hover {
 @media (max-width: 760px) {
     .site-page .page-hero {
         padding-block: 88px 76px;
+    }
+
+    .site-page .compact-page-hero {
+        padding-block: 72px;
     }
 
     .site-page .page-hero h1 {

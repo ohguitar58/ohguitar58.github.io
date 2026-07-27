@@ -1,123 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="home.title">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
+    <meta name="description" data-i18n-content="home.description"
         content="Jonathan Oh builds practical projects with data, artificial intelligence, automation, and visual storytelling.">
     <title>Jonathan Oh — Data, AI &amp; Automation</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="js/i18n.js" defer></script>
 </head>
 
 <body class="home-page">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip">Skip to content</a>
 
     <header class="home-header">
         <div class="site-shell home-nav">
             <a class="home-brand" href="index.html" aria-label="Jonathan Oh, home">JO<span>.</span></a>
 
-            <nav class="primary-nav" aria-label="Primary navigation">
-                <a href="index.html" aria-current="page">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+            <nav class="primary-nav" data-i18n-aria-label="nav.label" aria-label="Primary navigation">
+                <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
+                <a href="about.html" data-i18n="nav.about">About</a>
+                <a href="projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
             </nav>
+            <div data-language-control></div>
         </div>
     </header>
 
     <main id="main-content">
         <section class="site-shell home-hero" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <p class="eyebrow">Data · AI · Automation</p>
-                <h1 id="hero-title">Building thoughtful tools at the intersection of data, AI, and people.</h1>
-                <p class="hero-intro">
-                    I’m Jonathan Oh, a data and business intelligence professional exploring practical ways to use
-                    artificial intelligence, automation, and visual storytelling.
-                </p>
+                <p class="eyebrow" data-i18n="home.eyebrow">Data · AI · Automation</p>
+                <h1 id="hero-title" data-i18n="home.heading">Building thoughtful tools at the intersection of data, AI, and people.</h1>
+                <p class="hero-intro" data-i18n="home.intro">I’m Jonathan Oh, a data and business intelligence professional exploring practical ways to use artificial intelligence, automation, and visual storytelling.</p>
 
             </div>
 
-            <div class="hero-note" aria-label="Current focus">
+            <div class="hero-note" data-i18n-aria-label="home.focus" aria-label="Current focus">
                 <span class="status-dot" aria-hidden="true"></span>
                 <div>
-                    <p class="note-label">Currently exploring</p>
-                    <p>AI-assisted creative workflows, local automation, and geographic storytelling.</p>
+                    <p class="note-label" data-i18n="home.exploring">Currently exploring</p>
+                    <p data-i18n="home.focusText">AI-assisted creative workflows, local automation, and geographic storytelling.</p>
                 </div>
             </div>
         </section>
 
-        <section class="site-shell home-section" aria-labelledby="projects-title">
-            <div class="section-heading">
+        <section class="site-shell home-section">
+            <div class="section-heading section-heading--compact">
                 <div>
-                    <p class="eyebrow">Selected work</p>
-                    <h2 id="projects-title">Projects in progress</h2>
+                    <p class="eyebrow" data-i18n="home.selected">Selected work</p>
                 </div>
-                <a class="text-link" href="projects.html">View all projects <span aria-hidden="true">→</span></a>
+                <a class="text-link" href="projects.html"><span data-i18n="home.viewProjects">View all projects</span> <span aria-hidden="true">→</span></a>
             </div>
 
             <div class="project-list">
                 <a class="project-row" href="projects.html#sermon-gallery-trigger">
                     <span class="project-number">01</span>
                     <span class="project-summary">
-                        <strong>Church Sermon Cartoon Series</strong>
-                        <span>AI-assisted visual storytelling designed to make weekly messages more memorable.</span>
+                        <strong data-i18n="home.project1.title">Church Sermon Cartoon Series</strong>
+                        <span data-i18n="home.project1.description">AI-assisted visual storytelling designed to make weekly messages more memorable.</span>
                     </span>
-                    <span class="project-status">Active</span>
+                    <span class="project-status" data-i18n="status.active">Active</span>
                     <span class="project-arrow" aria-hidden="true">↗</span>
                 </a>
 
                 <a class="project-row" href="projects.html">
                     <span class="project-number">02</span>
                     <span class="project-summary">
-                        <strong>Comic-to-Video Project</strong>
-                        <span>Turning original illustrated stories into colorful, narrated video experiences.</span>
+                        <strong data-i18n="home.project2.title">Comic-to-Video Project</strong>
+                        <span data-i18n="home.project2.description">Turning original illustrated stories into colorful, narrated video experiences.</span>
                     </span>
-                    <span class="project-status">In progress</span>
+                    <span class="project-status" data-i18n="status.progress">In progress</span>
                     <span class="project-arrow" aria-hidden="true">↗</span>
                 </a>
 
                 <a class="project-row" href="projects.html">
                     <span class="project-number">03</span>
                     <span class="project-summary">
-                        <strong>Bible Study Maps</strong>
-                        <span>Exploring geographic narratives for biblical journeys and historical places.</span>
+                        <strong data-i18n="home.project3.title">Bible Study Maps</strong>
+                        <span data-i18n="home.project3.description">Exploring geographic narratives for biblical journeys and historical places.</span>
                     </span>
-                    <span class="project-status">Exploring</span>
+                    <span class="project-status" data-i18n="status.exploring">Exploring</span>
                     <span class="project-arrow" aria-hidden="true">↗</span>
                 </a>
             </div>
         </section>
 
-        <section class="site-shell home-section about-preview" aria-labelledby="about-title">
+        <section class="site-shell home-section about-preview about-preview--compact">
             <div>
-                <p class="eyebrow">About</p>
-                <h2 id="about-title">Experience grounded in data. Curiosity directed toward what’s next.</h2>
+                <p class="eyebrow" data-i18n="home.about">About</p>
             </div>
             <div class="about-preview-copy">
-                <p>
-                    My background spans business intelligence, data engineering, and machine learning. I’m now
-                    applying that foundation to useful AI workflows that support creativity, learning, and community.
-                </p>
-                <a class="text-link" href="about.html">More about me <span aria-hidden="true">→</span></a>
+                <p data-i18n="home.aboutText">My background spans business intelligence, data engineering, and machine learning. I’m now applying that foundation to useful AI workflows that support creativity, learning, and community.</p>
+                <a class="text-link" href="about.html"><span data-i18n="home.moreAbout">More about me</span> <span aria-hidden="true">→</span></a>
             </div>
         </section>
     </main>
 
     <footer class="home-footer">
         <div class="site-shell footer-inner">
-            <p>© 2026 Jonathan Oh</p>
+            <p data-i18n="footer.copyright">© 2026 Jonathan Oh</p>
             <div class="footer-links">
                 <a href="https://github.com/ohguitar58" target="_blank" rel="noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/jonathan-c-oh-38995641/" target="_blank"
                     rel="noreferrer">LinkedIn</a>
-                <a href="mailto:choh76@gmail.com">Email</a>
+                <a href="mailto:choh76@gmail.com" data-i18n="footer.email">Email</a>
             </div>
         </div>
     </footer>
