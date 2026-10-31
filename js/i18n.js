@@ -20,11 +20,11 @@ const translations = {
         'home.selected': 'Selected work',
         'home.viewProjects': 'View all projects',
         'home.project1.title': 'Church Sermon Cartoon Series',
-        'home.project1.description': 'AI-assisted visual storytelling designed to make weekly messages more memorable.',
-        'home.project2.title': 'Comic-to-Video Project',
-        'home.project2.description': 'Turning original illustrated stories into colorful, narrated video experiences.',
-        'home.project3.title': 'Bible Study Maps',
-        'home.project3.description': 'Exploring geographic narratives for biblical journeys and historical places.',
+        'home.project1.description': 'Using AI and visual storytelling to help church members remember each week\'s sermon message longer.',
+        'home.project2.title': 'Bible Study Maps',
+        'home.project2.description': 'Exploring biblical journeys and historical places through maps and stories.',
+        'home.project3.title': 'Comic-to-Video Project',
+        'home.project3.description': 'Adding color and narration to my child\'s hand-drawn comics to create vivid video stories.',
         'status.active': 'Active',
         'status.progress': 'In progress',
         'status.exploring': 'Exploring',
@@ -131,10 +131,10 @@ const translations = {
         'home.viewProjects': '전체 프로젝트 보기',
         'home.project1.title': '교회 설교 만화 시리즈',
         'home.project1.description': '성도들이 매주 설교의 메시지를 더 오래 기억할 수 있도록 AI와 시각적 스토리텔링을 활용합니다.',
-        'home.project2.title': '만화를 영상으로 만드는 프로젝트',
-        'home.project2.description': '아이가 직접 그린 만화에 색감과 내레이션을 더해 생생한 영상 이야기로 만듭니다.',
-        'home.project3.title': '성경 공부 지도',
-        'home.project3.description': '성경 속 여정과 역사적 장소를 지도와 이야기로 탐구합니다.',
+        'home.project2.title': '성경 공부 지도',
+        'home.project2.description': '성경 속 여정과 역사적 장소를 지도와 이야기로 탐구합니다.',
+        'home.project3.title': '만화를 영상으로 만드는 프로젝트',
+        'home.project3.description': '아이가 직접 그린 만화에 색감과 내레이션을 더해 생생한 영상 이야기로 만듭니다.',
         'status.active': '진행 중',
         'status.progress': '제작 중',
         'status.exploring': '구상 중',
@@ -235,7 +235,7 @@ const languageControl = `
 
 function getPreferredLanguage() {
     const savedLanguage = localStorage.getItem('site-language');
-    return savedLanguage === 'en' ? 'en' : 'ko';
+    return savedLanguage === 'ko' ? 'ko' : 'en';
 }
 
 function translate(key, language = getPreferredLanguage()) {
