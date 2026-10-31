@@ -235,7 +235,7 @@ const languageControl = `
 
 function getPreferredLanguage() {
     const savedLanguage = localStorage.getItem('site-language');
-    return savedLanguage === 'ko' ? 'ko' : 'en';
+    return savedLanguage === 'en' ? 'en' : 'ko';
 }
 
 function translate(key, language = getPreferredLanguage()) {
