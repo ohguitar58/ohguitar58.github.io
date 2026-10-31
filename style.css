@@ -543,7 +543,7 @@ html[lang="ko"] .project-detail-content h3 {
 }
 
 .home-section {
-    padding-block: 100px;
+    padding-block: 64px;
     border-top: 1px solid var(--home-border);
 }
 
@@ -787,7 +787,7 @@ html[lang="ko"] .project-detail-content h3 {
     }
 
     .home-section {
-        padding-block: 72px;
+        padding-block: 56px;
     }
 
     .section-heading {
